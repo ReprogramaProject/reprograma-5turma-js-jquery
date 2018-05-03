@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Reprograma</title>
+    <style>
+        .teste {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>teste</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="tg">Toggle</button>
+
+    <ul class="ho">
+        <li>A</li>
+        <li class="hey">A</li>
+        <li>A</li>
+        <li>A</li>
+    </ul>
+
+    <ul>
+        <li>B</li>
+        <li class="hey">B</li>
+        <li>B</li>
+        <li>B</li>
+    </ul>
+
+    <button id="stg">Slide Toggle</button>
+    <p id="stgp">
+        This is the paragraph to end all paragraphs. You should feel
+        <em>lucky</em> to have seen such a paragraph in your life. Congratulations!
+    </p>
+
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
+    <script>
+
+        $('#stg').click(function() {
+            $('#stgp').slideToggle();
+        });
+
+        $('.ho').find('.hey').html('fui encontrado');
+
+        $('#hide').click(function () {
+            $('p').hide();
+        });
+
+        $('#show').click(function () {
+            $('p').show();
+        });
+
+        $('#tg').click(function () {
+            $('p').toggle();
+        });
+
+    </script>
+</body>
+
+</html>
